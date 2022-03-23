@@ -1,33 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default class Header extends React.PureComponent {
-    render() {
-      const { context } = this.props;
-      const authUser = context.authenticatedUser;
-      return (
+
+const Header = () => {
+    return (
         <div id="root">
         <header>
-            <div className="wrap header--flex">
-                <h1 className="header--logo"><a href="/">Lifetime Learning Course Catalog 🕶</a></h1>
-                
-                <nav>
-                {/* Conditional logic is used to render the appropriate links, if the authenticatedUser is logged in, then welcome display is shown*/}
-                  {authUser ? 
-                    <React.Fragment>
-                        <span>Welcome, {authUser.firstName}! 👋</span>
-                        <Link to="/signout">Sign Out</Link>
-                    </React.Fragment>
-                  :
-                    <React.Fragment>
-                      <Link className="signup" to="/signup">Sign Up</Link>
-                      <Link className="signin" to="/signin">Sign In</Link>
-                    </React.Fragment>
-                  }
+            <div className="wrap header--flex">                
+                <nav className="footer--nav">
+                <React.Fragment>
+                    <Link className="social-nav portfolio" to="/portfolio">Portfolio</Link>
+                    <Link className="social-nav portfolio" to="/portfolio">GitHub</Link>
+                    <Link className="social-nav resume" to="/resume">Resume</Link>
+                    <Link className="social-nav blog" to="/blog">Blog</Link>
+                </React.Fragment>
                 </nav>
             </div>
         </header>
         </div>
       );
-    }
+      
   };
+
+export default Header;

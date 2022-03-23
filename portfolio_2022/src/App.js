@@ -8,6 +8,7 @@ import {
 
 //import app elements
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Main from './components/Main';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -20,21 +21,26 @@ import UnhandledError from './components/UnhandledError';
 // App provides routing around the Portfolio site
 const App = () => (
   <Router>
-      <div> 
+      <div className='route-container'> 
+      
       <Header />
       
-      <Routes>
-        <Route exact path="/" component={()=><Main/>} />
-        <Route path="/main" component={()=><Main/>} />
-        <Route path="/about" component={()=><About/>} />
-        <Route path="/contact" component={()=><Contact/>} />
-        <Route path="/portfolio" component={()=><Portfolio/>} />
-        <Route path="/resume" component={()=><Resume/>} />
-        <Route path="/blog" component={()=><Blog/>} />
-        <Route path='/error' component={UnhandledError} />
-        <Route  component={NotFound} />
-      </Routes>  
+        <Routes>
+          <Route exact path="/" element={<Main/>} />
+          <Route path="/main" element={<Main/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/portfolio" element={<Portfolio/>} />
+          <Route path="/resume" element={<Resume/>} />
+          <Route path="/blog" element={<Blog/>} />
+          <Route path='/error' element={<UnhandledError/>} />
+          <Route  element={<NotFound/>} />
+        </Routes>
+      
+      <Footer />
+      
       </div>
+    
     </Router>
 );
 
