@@ -1,23 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useWindupString, CharWrapper } from "windups";
 
 
 const Footer = () => {
+    //Reference settings for typed out text here https://windups.gwil.co/guides
+    const [windupText] = useWindupString(
+        "Please stay awhile and check out what I've been up to.", {
+        pace: (char) => (char === " " ? 20 : 20),
+        });
     return (
         <div id="root">
-        <header>
+        <footer>
             <div className="wrap footer--flex">
-                <h3 className="header--logo">Social</h3>
-                
                 <nav className="footer--nav">
                     <React.Fragment>
-                        <Link className="social-nav" to="www.twitter.com/nickhuemmer">Twitter</Link>
-                        <Link className="social-nav" to="https://github.com/ElDuke717">Github</Link>
+                        <Link className="social-nav contact" to="/blog">Contact</Link>    
+                        <Link className="social-nav blog" to="/blog">Blog</Link>
                     </React.Fragment>
                 </nav>
-                <p className="copyright">&copy; 2020, Nick Huemmer</p>
+                {windupText}
+                <p className="copyright">&copy; 2022, Nick Huemmer</p>
             </div>
-        </header>
+        </footer>
         </div>
       );
   };

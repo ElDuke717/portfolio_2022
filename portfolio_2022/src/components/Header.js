@@ -10,10 +10,10 @@ const Header = () => {
                 <nav className="footer--nav">
                 <React.Fragment>
                     <Link className="social-nav portfolio" to="/portfolio">Portfolio</Link>
-                    <Link className="social-nav resume" to="/resume">Resume</Link>
-                    <Link className="social-nav blog" to="/blog">Blog</Link>
+                    <Link className="social-nav resume" to={{ pathname: "https://elduke717.github.io/tdfewd-project-9/experience.html"}}>Resume</Link>
                 </React.Fragment>
-                {/* <a className="social-nav github" href="https://github.com/ElDuke717">GitHub</a> */}
+                
+                
                 </nav>
             </div>
         </header>

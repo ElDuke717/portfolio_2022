@@ -4,8 +4,15 @@
 
 /* CSS validated 1/5/21 at 11:55am */
 
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Mochiy+Pop+P+One&family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee&family=Exo:wght@500;800&family=Mochiy+Pop+P+One&family=Poppins:wght@400;600&family=Press+Start+2P&display=swap');
+
+/* /////////////////////Fonts/////////////////// */
+/* font-family: 'Audiowide', cursive;
+font-family: 'Bungee', cursive;
+font-family: 'Exo', sans-serif;
+font-family: 'Mochiy Pop P One', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Press Start 2P', cursive; */
 
 :root {
     --primary-text-color: #fffbf7;
@@ -16,7 +23,7 @@
     --title-border-color: #193d66af;
     --title-shadow-color: rgba(0, 2, 128, 0.384);
     --glow-color:  rgba(242, 245, 54, 0.712);
-    --font-title: 'Bungee', cursive;
+    --font-title: 'Exo', sans-serif;
     --font-text: 'Catamaran', sans-serif;
     --text-shadow: #c9c9c9;
   }
@@ -47,6 +54,7 @@
     margin: 0;
     padding: 0;
     font-family:'Catamaran', sans-serif; 
+    background-color: #000a27;
     
   }
   
